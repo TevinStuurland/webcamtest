@@ -22,7 +22,7 @@
   function startup() {
     video = document.querySelector('video');
     canvas = document.querySelector('canvas');
-    photo = document.querySelector('photo');
+    photo = document.getElementById('photo');
     startbutton = document.querySelector('startbutton');
 
     navigator.getMedia = ( navigator.getUserMedia ||
