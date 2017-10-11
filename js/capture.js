@@ -23,6 +23,7 @@
     video = document.getElementById('video');
     canvas = document.getElementById('canvas');
     photo = document.getElementById('photo');
+    photo = document.getElementById('photo2');
     startbutton = document.getElementById('startbutton');
 
     navigator.getMedia = ( navigator.getUserMedia ||
@@ -81,7 +82,7 @@
 
   function clearphoto() {
     var context = canvas.getContext('2d');
-    context.fillStyle = "#AAA";
+    context.fillStyle = "#695744";
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     var data = canvas.toDataURL('image/png');
