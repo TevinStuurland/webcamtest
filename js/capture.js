@@ -20,10 +20,10 @@
   var startbutton = null;
 
   function startup() {
-    video = document.querySelector('video');
-    canvas = document.querySelector('canvas');
-    photo = document.querySelector('photo');
-    startbutton = document.querySelector('startbutton');
+    video = document.getElementById('video');
+    canvas = document.getElementById('canvas');
+    photo = document.getElementById('photo');
+    startbutton = document.getElementById('startbutton');
 
     navigator.getMedia = ( navigator.getUserMedia ||
                            navigator.webkitGetUserMedia ||

@@ -9,33 +9,33 @@ a{
   color: #695744;
 }
 
-.video {
+#video {
   border: 1px solid black;
   width:320px;
   height:240px;
 }
 
-.photo {
+#photo {
   border: 1px solid black;
   width:320px;
   height:240px;
 }
 
-.canvas {
+#canvas {
   display:none;
 }
 
-.camera {
+#camera {
   width: 340px;
   display:inline-block;
 }
 
-.output {
+#output {
   width: 340px;
   display:inline-block;
 }
 
-.startbutton {
+#startbutton {
   display:block;
   position:relative;
   margin-left:auto;
