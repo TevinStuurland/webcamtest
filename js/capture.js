@@ -74,8 +74,8 @@
     startbutton.addEventListener('click', function(ev){
       takepicture();
       count++;
-      var counter = count % 2;
-      console.log(counter);
+      // var counter = count % 2;
+      // console.log(counter);
       ev.preventDefault();
     }, false);
     
@@ -106,20 +106,27 @@
 
   function takepicture() {
     var context = canvas.getContext('2d');
+    
     if (width && height) {
       canvas.width = width;
       canvas.height = height;
       context.drawImage(video, 0, 0, width, height);
     
       var data = canvas.toDataURL('image/png');
-
-      if (counter = 1) {
+      
+      switch (count % 2) {
+        case 1:
         photo.setAttribute('src', data);
-      } if counter = 0 {
+          console.log('Test');
+          break;
+        case 0: // foo is 0 so criteria met here so this block will run
         photo2.setAttribute('src', data);
-      } else {
-        clearphoto();
-      }
+          console.log('test 2');
+          // NOTE: the forgotten break would have been here
+      };
+      console.log(count);
+      
+      
     } else {
       clearphoto();
     }
