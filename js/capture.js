@@ -115,11 +115,11 @@
       var data = canvas.toDataURL('image/png');
       
       switch (count % 2) {
-        case 1:
+        case 0:
         photo.setAttribute('src', data);
           console.log('Test');
           break;
-        case 0: // foo is 0 so criteria met here so this block will run
+        case 1: // foo is 0 so criteria met here so this block will run
         photo2.setAttribute('src', data);
           console.log('test 2');
           // NOTE: the forgotten break would have been here
