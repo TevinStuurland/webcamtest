@@ -117,11 +117,11 @@
       switch (count % 2) {
         case 0:
         photo.setAttribute('src', data);
-          console.log('Test');
+          console.log('Photo 1');
           break;
         case 1: // foo is 0 so criteria met here so this block will run
         photo2.setAttribute('src', data);
-          console.log('test 2');
+          console.log('Photo 2');
           // NOTE: the forgotten break would have been here
       };
       console.log(count);
