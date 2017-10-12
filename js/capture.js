@@ -19,6 +19,7 @@
   var photo = null;
   var photo2 = null;
   var startbutton = null;
+  var count = 0;
 
   function startup() {
     video = document.getElementById('video');
@@ -72,11 +73,16 @@
 
     startbutton.addEventListener('click', function(ev){
       takepicture();
+      count++;
+      var counter = count % 2;
+      console.log(counter);
       ev.preventDefault();
     }, false);
     
     clearphoto();
   }
+
+  
 
   // Fill the photo with an indication that none has been
   // captured.
@@ -106,8 +112,12 @@
       context.drawImage(video, 0, 0, width, height);
     
       var data = canvas.toDataURL('image/png');
-      photo.setAttribute('src', data);
-      photo2.setAttribute('src', data);
+
+      if (counter = 1) {
+        photo.setAttribute('src', data);
+      } else {
+        photo2.setAttribute('src', data);
+      }
     } else {
       clearphoto();
     }
