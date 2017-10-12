@@ -115,8 +115,10 @@
 
       if (counter = 1) {
         photo.setAttribute('src', data);
-      } else {
+      } if counter = 0 {
         photo2.setAttribute('src', data);
+      } else {
+        clearphoto();
       }
     } else {
       clearphoto();
